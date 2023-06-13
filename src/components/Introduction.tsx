@@ -9,14 +9,14 @@ import { Header, ConsultButton, ConsultButtonText } from './StyledComponents'
 export const Introduction = () => {
     return (
         <Grid container spacing={2} >
-            <Grid item xs={6} mt={5}>
+            <Grid item xs={5.5} mt={5}>
                 <Stack direction="column" spacing={2}
                     sx={{ textAlign: 'flex-start' }}>
                     <Stack direction="column" alignItems="flex-start" spacing={2} ml={1}>
                         <Circle />
                     </Stack>
                         <Stack direction="column" alignItems="flex-start"
-                            px={22} >
+                            px={20} >
                             <Header isHeader>
                                 Virtual healthcare for you
                             </Header>
@@ -37,7 +37,7 @@ export const Introduction = () => {
 
                 </Stack>
             </Grid>
-            <Grid item xs={6} mt={5}>
+            <Grid item xs={5.5} mt={5}>
                 <Avatar variant="rounded"
                     sx={{
                         height: '690px', width: '800px'

@@ -61,7 +61,7 @@ export const Navbar = () => {
                         </Button>
                         <Button color="inherit">
                             <NavbarItem>
-                                Find a Doctor
+                                Find a doctor
                             </NavbarItem>
                         </Button>
                         <Button color="inherit">
