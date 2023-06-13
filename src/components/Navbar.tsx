@@ -1,12 +1,12 @@
 import {
-    Stack, Toolbar, Button, Typography, Avatar
+    Stack, Toolbar, Button
 } from '@mui/material'
 
-import IconButton from '@mui/material/IconButton';
-import { ThemeProvider, } from '@mui/material';
+import { ThemeProvider,Theme } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
-import { styled } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
+import {AvatarItem, NavbarItem,NavbarHeader} from './StyledComponents'
+
 
 const theme = createTheme({
     palette: {
@@ -34,33 +34,12 @@ const useStyles = makeStyles({
         justifyContent: 'flex-end',
         flexGrow: 1,
     },
-
+    navbarToStart: {
+        justifyContent: 'flex-start',
+         flexGrow: 1
+    },
 });
 
-const AvatarItem = styled(Avatar)(({ theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-    ...theme.typography.h5,
-    color: '#fff',
-}));
-
-const NavbarItem = styled(Typography)(({ theme }) => ({
-    fontSize: '18px',
-    color: theme.palette.success.light,
-    textTransform: 'capitalize'
-}));
-
-const NavbarHeader = styled(Typography)(({ theme }) => ({
-    fontSize: '24px',
-    color: theme.palette.success.main,
-    textTransform: 'capitalize',
-    marginLeft: 10
-}));
-
-const NavbarHome = styled(Typography)(({ theme }) => ({
-    fontSize: '18px',
-    color: theme.palette.success.main,
-    textTransform: 'capitalize',
-}));
 
 
 
@@ -71,31 +50,31 @@ export const Navbar = () => {
             <Stack sx={{ marginLeft: 20, marginRight: 20 }}>
                 <Toolbar>
                     <Stack direction="row" spacing={2} className={classes.navbarToLeft}>
-                        <IconButton sx={{ display: { justifyContent: 'flex-start', flexGrow: 1, } }}>
+                        <Stack direction="row" className={classes.navbarToStart} >
                             <AvatarItem >T</AvatarItem>
                             <NavbarHeader>
                                 Trafalgar
                             </NavbarHeader>
-                        </IconButton>
-                        <Button color="inherit"  >
-                            <NavbarHome>Home</NavbarHome>
+                        </Stack>
+                        <Button color="inherit" >
+                            <NavbarItem isHome>Home</NavbarItem>
                         </Button>
-                        <Button color="inherit"  >
+                        <Button color="inherit">
                             <NavbarItem>
                                 Find a Doctor
                             </NavbarItem>
                         </Button>
-                        <Button color="inherit"  >
+                        <Button color="inherit">
                             <NavbarItem>
                                 Apps
                             </NavbarItem>
                         </Button>
-                        <Button color="inherit"  >
+                        <Button color="inherit">
                             <NavbarItem>
                                 Testimonials
                             </NavbarItem>
                         </Button>
-                        <Button color="inherit"  >
+                        <Button color="inherit">
                             <NavbarItem>
                                 About us
                             </NavbarItem>
