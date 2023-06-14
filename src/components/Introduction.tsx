@@ -30,11 +30,6 @@ export const Introduction = () => {
                             </ConsultButton>
 
                         </Stack>
-
-
-
-
-
                 </Stack>
             </Grid>
             <Grid item xs={5.5} mt={5}>
@@ -42,24 +37,10 @@ export const Introduction = () => {
                     sx={{
                         height: '690px', width: '800px'
                     }}
-                    src={process.env.PUBLIC_URL + '/input.png'}>
+                    src={process.env.PUBLIC_URL + '/img/input.png'}>
                 </Avatar>
             </Grid>
         </Grid>
     )
 }
-/**  <Stack direction="row" spacing={2} mt={10}
-            sx={{ display: { justifyContent: 'center', flexGrow: 1, } }}>
-            <Stack direction="column" spacing={2}
-            sx={{ display: { justifyContent: 'center' } }}>
-                <Typography variant ='h2' >Virtual healthcare for you</Typography>
-                <Item>Item 2</Item>
-            </Stack>
-            <Avatar variant="rounded"
-                sx={{
-                    height: '600px', width: '700px'
-                }}
-                src={process.env.PUBLIC_URL + '/input.png'}>
-            </Avatar>
-        </Stack> */
 

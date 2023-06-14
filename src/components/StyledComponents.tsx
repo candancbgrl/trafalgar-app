@@ -38,16 +38,17 @@ export const Header = styled(Typography)<{ isHeader?: boolean, isSub?: boolean }
 
 }));
 
-export const ConsultButton = styled(Button)(({ theme }) => ({
+export const ConsultButton = styled(Button)<{ isOur?: boolean, index?: boolean }>(({ theme, isOur, index }) => ({
     borderRadius: 50,
-    backgroundColor: theme.palette.primary.main,
-    width: '200px',
+    backgroundColor: !isOur ? theme.palette.primary.main : '#fff',
+    width: '250px',
     height: '64px',
-    marginTop: 60
+    marginTop: 60,
+    marginLeft: index ? 200 : 0
 }));
-export const ConsultButtonText = styled(Typography)(({ theme }) => ({
-    color: '#fff',
-    fontWeight: 'bold',
+export const ConsultButtonText = styled(Typography)<{ isOur?: boolean }>(({ theme, isOur }) => ({
+    color: isOur ? theme.palette.primary.main : '#fff',
+    fontWeight: !isOur ? 'bold' : 'normal',
     textTransform: 'capitalize',
     fontSize: '20px'
 }));
@@ -73,4 +74,29 @@ export const CardText = styled(Typography)<{ isHeader?: boolean }>(({ theme, isH
     lineHeight: isHeader ? '56px' : '28px',
     textAlign: 'start',
     color: isHeader ? '#000' : '#7D7987',
+}));
+
+
+//Subtitles
+export const SubHeader = styled(Typography)<{ index?: boolean }>(({ theme, index }) => ({
+    textAlign: 'start',
+    fontSize: '36px',
+    lineHeight: '56px',
+    fontWeight: 'bold',
+    paddingRight: 7,
+    color: '#000',
+    marginTop: 20,
+    marginRight: index ? 150 : 130,
+    marginLeft: index ? 200 : 0
+}));
+
+export const SubText = styled(Typography)<{ index?: boolean }>(({ theme, index }) => ({
+    textAlign: 'start',
+    fontSize: '18px',
+    lineHeight: '32px',
+    paddingRight: 7,
+    color: '#7D7987',
+    marginTop: 20,
+    marginRight: index ? 100 : 130,
+    marginLeft: index ? 200 : 0
 }));

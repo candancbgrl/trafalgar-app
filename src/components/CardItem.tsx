@@ -17,8 +17,6 @@ type CardItemProps = {
     text: any;
 }
 
-
-
 export const CardItem: React.FC<CardItemProps> = ({ iconName, header, text }) => {
     return (
         <Card sx={{ minWidth: 275, maxWidth: 300 }}>
