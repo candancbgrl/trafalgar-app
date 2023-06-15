@@ -11,9 +11,9 @@ type ArticleCardProp = {
 
 export const ArticleCard: React.FC<ArticleCardProp> = ({ image, header, text }) => {
   return (
-    <Card sx={{ maxWidth: 367, borderRadius: 10,boxShadow: '10px 10px 40px 10px rgba(0, 0, 0, 0.1)', }}>
+    <Card sx={{maxWidth: 387, borderRadius: 10,boxShadow: '10px 10px 40px 10px rgba(0, 0, 0, 0.1)', }}>
       <CardMedia
-        sx={{ height: 245 }}
+        sx={{ height: 225 }}
         image={image}
         title="green iguana"
       />

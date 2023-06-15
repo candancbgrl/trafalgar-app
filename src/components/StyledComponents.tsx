@@ -20,9 +20,10 @@ export const NavbarItem = styled(Typography)<{ isHome?: boolean }>(({ theme, isH
 export const NavbarHeader = styled(Typography)(({ theme }) => ({
     fontSize: '24px',
     color: theme.palette.success.main,
-    textTransform: 'capitalize',
+    textTransform: 'none',
     marginLeft: 10,
-    marginTop: 3
+    marginTop: 3,
+    fontWeight:'bold'
 }));
 
 //Introduction
@@ -35,6 +36,7 @@ export const Header = styled(Typography)<{ isHeader?: boolean, isSub?: boolean }
     color: (isHeader || isSub) ? '#000' : '#7D7987',
     marginTop: isHeader ? 0 : 30,
     marginRight: isHeader ? 100 : (isSub ? 0 : 60),
+
 
 }));
 
@@ -63,7 +65,7 @@ export const ServicesText = styled(Typography)(({ theme }) => ({
     paddingRight: 7,
     color: '#7D7987',
     marginTop: 20,
-    marginLeft: 330, marginRight: 330
+    marginInline:440
 }));
 export const CustomCard = styled(Card)(({ theme }) => ({
     borderRadius: '10px',
@@ -77,6 +79,8 @@ export const CardText = styled(Typography)<{ isHeader?: boolean }>(({ theme, isH
     textAlign: 'start',
     color: isHeader ? '#000' : '#7D7987',
     fontWeight: isHeader ? 'bold' : 'normal',
+    marginTop: isHeader ? 20 : 0,
+ 
 }));
 
 

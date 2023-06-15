@@ -23,9 +23,9 @@ const Circles = () => {
 export const GradyanCard = () => {
   return (
     <Grid container justifyContent="center" alignItems="center" mt={30} mb={7}>
-      <Stack direction='row' spacing={2} sx={{ alignSelf: 'flex-end', marginRight: 1, marginBottom: 2 }}>
-        <Circles/>
-        <Circles/>
+      <Stack direction='row' spacing={2} sx={{ alignSelf: 'flex-end', marginRight: 1, marginBottom: 4 }}>
+        <Circles />
+        <Circles />
       </Stack>
 
 
@@ -38,7 +38,7 @@ export const GradyanCard = () => {
               fontSize: '36px',
               fontWeight: 'bold',
               color: '#fff',
-              fontFamily: 'Muli',
+              fontFamily: 'Muli, sans-serif',
               marginRight: 30
             }}>What our customers are saying</Typography>
             <Stack direction='column' sx={{ alignItems: 'flex-end' }}>
@@ -51,27 +51,22 @@ export const GradyanCard = () => {
           <Grid container mt={7}>
             <Grid item xs={3}>
 
+
               <Box
                 sx={{
-                  backgroundColor: 'red', borderRadius: 100,
-                  overflow: 'hidden', marginLeft: 8,
-                  width: 150, height: 150, marginTop: 2
+                  borderRadius: 100,
+                  overflow: 'hidden', marginLeft: 13,
+                  width: 150, height: 150, marginTop: 2, boxShadow: '0 0 0 5px white',
                 }}>
-                <Box
-                  sx={{
-                    backgroundColor: 'red', borderRadius: 800,
-                    paddingRight: 150,
-                    width: 100, height: 150, marginTop: 2
-                  }}>
 
-                  <img
-                    src={process.env.PUBLIC_URL + '/img/p1.png'}
-                    style={{
-                      marginRight: 50,
-                      width: '320px', height: '250px', objectFit: 'cover'
-                    }}
-                  ></img>
-                </Box>
+
+                <img
+                  src={process.env.PUBLIC_URL + '/img/p1.png'}
+                  style={{
+                    transform: 'scale(2)',
+                    width: '180px', height: '260px', objectFit: 'cover'
+                  }}
+                ></img>
               </Box>
 
             </Grid>

@@ -19,8 +19,8 @@ type CardItemProps = {
 
 export const CardItem: React.FC<CardItemProps> = ({ iconName, header, text }) => {
     return (
-        <Card sx={{ minWidth: 275, maxWidth: 300 , borderRadius: 10,boxShadow: '1px 1px 30px 1px rgba(0, 0, 0, 0.1)',}}>
-            <CardContent sx={{ marginLeft: 2 }} >
+        <Card sx={{minWidth: 275, maxWidth: 300 , borderRadius: 10,boxShadow: '1px 1px 30px 1px rgba(0, 0, 0, 0.1)',}}>
+            <CardContent sx={{ marginLeft: 2,marginTop:5, }} >
             
                 {iconName === 'search' ?
                     <div style={{ display: 'flex', alignItems: 'center' }}>
