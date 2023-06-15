@@ -49,8 +49,10 @@ export const ConsultButton = styled(Button)<{ isOur?: boolean, index?: boolean }
 export const ConsultButtonText = styled(Typography)<{ isOur?: boolean }>(({ theme, isOur }) => ({
     color: isOur ? theme.palette.primary.main : '#fff',
     fontWeight: !isOur ? 'bold' : 'normal',
-    textTransform: 'capitalize',
-    fontSize: '20px'
+    textTransform: 'none',
+    fontSize: '20px',
+    fontFamily: 'Muli, sans-serif',
+   
 }));
 
 //Our Services
@@ -74,6 +76,7 @@ export const CardText = styled(Typography)<{ isHeader?: boolean }>(({ theme, isH
     lineHeight: isHeader ? '56px' : '28px',
     textAlign: 'start',
     color: isHeader ? '#000' : '#7D7987',
+    fontWeight: isHeader ? 'bold' : 'normal',
 }));
 
 
@@ -99,4 +102,26 @@ export const SubText = styled(Typography)<{ index?: boolean }>(({ theme, index }
     marginTop: 20,
     marginRight: index ? 100 : 130,
     marginLeft: index ? 200 : 0
+}));
+
+// Bottom
+
+export const BottomSubTitle = styled(Typography)<{ isHeader?: boolean }>(({ theme, isHeader }) => ({
+    color: '#fff',
+    fontSize: isHeader ? '20px' : '18px',
+    lineHeight: isHeader ? '60px' : '38px',
+    fontWeight: isHeader ? 'bold' : 'normal',
+    textTransform: 'none',
+    fontFamily: 'Muli, sans-serif',
+
+}));
+export const BottomTrafText = styled(Typography)<{ islower?: boolean, isTrafalgar?: boolean }>(({ theme, islower, isTrafalgar }) => ({
+    textAlign: 'start',
+    maxWidth: '391px',
+    fontSize: islower ? '16px' : isTrafalgar ? '24px' : '18px',
+    color: '#fff',
+    lineHeight: isTrafalgar ? '100%' : '28px',
+    paddingTop: islower ? 2.5 : (isTrafalgar ? 10 : 0),
+    fontWeight: isTrafalgar ? 'bold' : 'normal',
+    fontFamily: 'Muli, sans-serif',
 }));

@@ -1,6 +1,5 @@
 import { Stack, Avatar } from '@mui/material';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { transform } from 'typescript';
 const Circles = () => {
     return (
