@@ -1,14 +1,11 @@
 import React from 'react'
-import { Divider, Box, Card, CardContent, Stack, Typography } from '@mui/material';
+import { Card, CardContent, Stack } from '@mui/material';
 import { Search } from './Icons/Search'
 import { Pharmacy } from './Icons/Pharmacy'
 import { Consultation } from './Icons/Consultation'
 import { Emergency } from './Icons/Emergency'
 import { Info } from './Icons/Info'
-
 import { CardText } from './StyledComponents'
-
-
 import { Tracking } from './Icons/Tracking'
 
 type CardItemProps = {

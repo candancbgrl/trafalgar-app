@@ -1,6 +1,7 @@
-import React from 'react';
-import { Box, Grid, Stack, Avatar, Typography } from '@mui/material';
+import { Box, Grid, Stack, Avatar, Typography,Divider } from '@mui/material';
 import { Circle } from './Circle'
+import { GradyanCardCircle } from './StyledComponents'
+
 
 const boxStyle = {
   background: 'linear-gradient(to left, #00bfff, #1e90ff)',
@@ -11,11 +12,11 @@ const boxStyle = {
 const Circles = () => {
   return (
     <Stack direction="column" spacing={2}>
-      <Avatar sx={{ bgcolor: '#97C3F9', width: 10, height: 10, opacity: 0.5 }}> </Avatar>
-      <Avatar sx={{ bgcolor: '#97C3F9', width: 10, height: 10, opacity: 0.5, }}> </Avatar>
-      <Avatar sx={{ bgcolor: '#97C3F9', width: 10, height: 10, opacity: 0.5, }}> </Avatar>
-      <Avatar sx={{ bgcolor: '#97C3F9', width: 10, height: 10, opacity: 0.5, }}> </Avatar>
-      <Avatar sx={{ bgcolor: '#97C3F9', width: 10, height: 10, opacity: 0.5, }}> </Avatar>
+      <GradyanCardCircle> </GradyanCardCircle>
+      <GradyanCardCircle> </GradyanCardCircle>
+      <GradyanCardCircle> </GradyanCardCircle>
+      <GradyanCardCircle> </GradyanCardCircle>
+      <GradyanCardCircle> </GradyanCardCircle>
     </Stack>
   )
 }
@@ -27,8 +28,6 @@ export const GradyanCard = () => {
         <Circles />
         <Circles />
       </Stack>
-
-
       <Box sx={boxStyle}>
         <Stack direction='column'>
           <Stack direction='row' sx={{ justifyContent: 'flex-end', marginRight: 2, marginTop: 2 }}>
@@ -41,25 +40,22 @@ export const GradyanCard = () => {
               fontFamily: 'Muli, sans-serif',
               marginRight: 30
             }}>What our customers are saying</Typography>
+            
             <Stack direction='column' sx={{ alignItems: 'flex-end' }}>
               <Stack direction="column" alignItems="flex-end" spacing={2}  >
                 <Circle />
               </Stack>
             </Stack>
           </Stack>
-
+          <Divider sx={{ width: 56, margin: '0 auto', height: 1.5, marginTop: 2, backgroundColor: '#fff' }} />
           <Grid container mt={7}>
             <Grid item xs={3}>
-
-
               <Box
                 sx={{
                   borderRadius: 100,
                   overflow: 'hidden', marginLeft: 13,
                   width: 150, height: 150, marginTop: 2, boxShadow: '0 0 0 5px white',
                 }}>
-
-
                 <img
                   src={process.env.PUBLIC_URL + '/img/p1.png'}
                   style={{
@@ -68,7 +64,6 @@ export const GradyanCard = () => {
                   }}
                 ></img>
               </Box>
-
             </Grid>
             <Grid item xs={3} mt={3}>
               <Typography sx={{
@@ -80,9 +75,6 @@ export const GradyanCard = () => {
                 textAlign: 'start', fontSize: '18px', color: '#fff',
               }}
               >Founder Circle</Typography>
-
-
-
             </Grid>
             <Grid item xs={6}>
               <Typography
@@ -98,42 +90,6 @@ export const GradyanCard = () => {
           </Grid>
 
 
-          {/* <Stack direction='row'>
-            <Stack direction='row' mt={10}>
-              <Box
-                sx={{ position: 'relative', width: 150, height: 150, paddingLeft: 20 }}>
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    width: 150, height: 150,
-                    borderRadius: '50%',
-                    backgroundColor: '#EDF7FA',
-                  }}
-                />
-                <Avatar
-                  src={process.env.PUBLIC_URL + '/img/p1.png'}
-                  sx={{ marginTop: 1, marginLeft: 1, width: 133, height: 133 }}
-                />
-              </Box>
-              <Stack direction='column' >
-                <Typography sx={{
-                  color: '#fff', fontSize: '22px', fontWeight: 'bold',
-                   paddingLeft: 1,paddingTop:4,marginLeft:2,lineHeight:'48px'
-                }}
-                >Edward Newgate</Typography>
-                <div style={{textAlign:'start',fontSize:'18px',color:'#fff',marginLeft:23,}}  >Founder Circle</div>
-              </Stack>
-             
-            </Stack>
-            <Typography
-               sx={{
-                  color: '#fff', fontSize: '19px', 
-                   paddingLeft: 1,paddingTop:4,marginLeft:2,lineHeight:'48px'
-                }}
-                >“Our dedicated patient engagement app and 
-                web portal allow you to access information instantaneously (no tedeous form, long calls, 
-                or administrative hassle) and securely”</Typography>
-          </Stack> */}
         </Stack>
       </Box>
     </Grid>

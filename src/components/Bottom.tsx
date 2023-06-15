@@ -1,8 +1,7 @@
 import {
-    Stack, Typography, Box, Avatar
+    Stack, Box, Avatar
 } from '@mui/material'
 import { BottomSubTitle, BottomTrafText } from './StyledComponents';
-
 
 
 const boxStyle = {
@@ -21,7 +20,6 @@ const Circles = () => {
         </Stack>
     )
 }
-
 
 export const Bottom = () => {
     return (
@@ -58,7 +56,6 @@ export const Bottom = () => {
                     <BottomSubTitle>Instructions</BottomSubTitle>
                     <BottomSubTitle>How it works</BottomSubTitle>
                 </Stack>
-
             </Stack>
             <Stack direction='column' spacing={2} sx={{ marginLeft: 1 }}>
                 <Circles></Circles>

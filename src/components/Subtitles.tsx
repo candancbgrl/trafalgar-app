@@ -4,13 +4,12 @@ import Divider from '@mui/material/Divider';
 import { Circle } from './Circle';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
-import { Header, ConsultButton, ConsultButtonText, SubText, SubHeader } from './StyledComponents'
+import {ConsultButton, ConsultButtonText, SubText, SubHeader } from './StyledComponents'
 import SouthIcon from '@mui/icons-material/South';
+
 type SubtitlesProps = {
     index: any;
 }
-
-
 
 export const Subtitles: React.FC<SubtitlesProps> = ({ index }) => {
     return (
@@ -18,18 +17,14 @@ export const Subtitles: React.FC<SubtitlesProps> = ({ index }) => {
             {index === '0' ? <Grid container spacing={2} >
                 <Grid item xs={5.5} mt={5} ml={15}>
                     <Avatar variant="rounded"
-                        sx={{
-                            height: '515px', width: '700px'
-                        }}
+                        sx={{ height: '515px', width: '700px' }}
                         src={process.env.PUBLIC_URL + '/img/2.png'}>
                     </Avatar>
                 </Grid>
                 <Grid item xs={5.5} mt={5}>
                     <Stack direction="column" spacing={2} px={15}
                         sx={{ textAlign: 'flex-start' }}>
-
-                        <Stack direction="column" alignItems="flex-start"
-                            px={1} >
+                        <Stack direction="column" alignItems="flex-start" px={1} >
                             <SubHeader>
                                 Leading healthcare providers
                             </SubHeader>
@@ -53,12 +48,8 @@ export const Subtitles: React.FC<SubtitlesProps> = ({ index }) => {
                     <Grid container spacing={2} mt={20} >
 
                         <Grid item xs={5.5} mt={5}>
-                            <Stack direction="column" spacing={2} pl={20}
-                                sx={{ textAlign: 'flex-start' }}>
-
-
-                                <Stack direction="column" alignItems="flex-start"
-                                >
+                            <Stack direction="column" spacing={2} pl={20} sx={{ textAlign: 'flex-start' }}>
+                                <Stack direction="column" alignItems="flex-start">
                                     <SubHeader index>
                                         Download our mobile apps
                                     </SubHeader>
@@ -75,7 +66,6 @@ export const Subtitles: React.FC<SubtitlesProps> = ({ index }) => {
                                             </ConsultButtonText>
                                             <SouthIcon sx={{ marginLeft: 1, marginTop: 0.5 }} fontSize='small' />
                                         </Stack>
-
                                     </ConsultButton>
                                 </Stack>
                             </Stack>

@@ -1,8 +1,7 @@
 import {
     Stack, Toolbar, Button
 } from '@mui/material'
-
-import { ThemeProvider,Theme } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
 import { makeStyles } from '@mui/styles';
 import {AvatarItem, NavbarItem,NavbarHeader} from './StyledComponents'
@@ -39,9 +38,6 @@ const useStyles = makeStyles({
          flexGrow: 1
     },
 });
-
-
-
 
 export const Navbar = () => {
     const classes = useStyles();

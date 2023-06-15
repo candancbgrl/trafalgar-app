@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header, ServicesText, ConsultButton,ConsultButtonText } from './StyledComponents';
-import { Divider, Box, Card, CardContent, Stack, Typography } from '@mui/material';
+import { Divider} from '@mui/material';
 import { Vector } from './Vector'
 
 export const Cards = () => {
